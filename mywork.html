@@ -1,0 +1,106 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), #2b1b1b;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .hover-animate {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-animate:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .avatar-container {
+            position: relative;
+            display: inline-block;
+            animation: subtleBounce 5s infinite;
+        }
+        @keyframes subtleBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        .avatar-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #d7a7a7;
+            border-radius: 50%;
+            animation: subtleRotate 5s linear infinite;
+        }
+        @keyframes subtleRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="bg-[#2b1b1b] text-[#d7a7a7] border border-[#d7a7a7] rounded-lg p-6 shadow-lg max-w-2xl fade-in">
+        <nav class="flex space-x-4 mb-4 justify-center">
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="index.html">Home</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="aboutme.html">About Me</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="contact.html">Contact</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="mywork.html">My Work</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300 flex items-center" href="#">
+                Services <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+        </nav>
+        <div class="text-center mb-4">
+            <div class="avatar-container mx-auto mb-4">
+                <img alt="Avatar" class="rounded-full shadow-md" height="100" src="https://i.ibb.co/7XtrPXS/The-Heavy.png" width="100"/>
+            </div>
+        </div>
+        <div class="mb-6">
+            <h2 class="text-xl mb-4">My Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Placeholder image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/LQbFvM2xstKOEd5vhFWFKs1lXQsSDS9wnBHhBJCW3NdGd94E.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 1</h3>
+                    <p class="mb-2">No project available.</p>
+                </div>
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Placeholder image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/LQbFvM2xstKOEd5vhFWFKs1lXQsSDS9wnBHhBJCW3NdGd94E.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 2</h3>
+                    <p class="mb-2">No project available.</p>
+                </div>
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Placeholder image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/LQbFvM2xstKOEd5vhFWFKs1lXQsSDS9wnBHhBJCW3NdGd94E.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 3</h3>
+                    <p class="mb-2">No project available.</p>
+                </div>
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Placeholder image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/LQbFvM2xstKOEd5vhFWFKs1lXQsSDS9wnBHhBJCW3NdGd94E.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 4</h3>
+                    <p class="mb-2">No project available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
