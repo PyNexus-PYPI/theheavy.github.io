@@ -1,0 +1,190 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), #2b1b1b;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .hover-animate {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .hover-animate:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .progress-bar {
+            background-color: #d7a7a7;
+            height: 8px;
+            border-radius: 4px;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+        .achievement-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: achievementFadeIn 1s forwards;
+        }
+        @keyframes achievementFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="bg-[#2b1b1b] text-[#d7a7a7] border border-[#d7a7a7] rounded-lg p-6 shadow-lg max-w-2xl fade-in">
+        <nav class="flex space-x-4 mb-4 justify-center">
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="#">Home</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="#">About Me</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="#">Contact</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300" href="#">My Work</a>
+            <a class="hover:underline hover:text-[#ffcccc] transition duration-300 flex items-center" href="#">
+                Services <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+        </nav>
+        <div class="text-center mb-4">
+            <img alt="Placeholder image" class="mx-auto mb-4 rounded-full shadow-md" height="100" src="https://storage.googleapis.com/a1aa/image/Uqse5GabY9WdXaDb0YZGCLfD9YeHuYptoV2J1uuuwA8A3jHnA.jpg" width="100"/>
+            <p>Hi! It's good to see you \( ' o ' )/</p>
+        </div>
+        <div class="mb-6">
+            <h2 class="text-xl mb-4">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Project 1 image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/NP4Mtgbjw0YKClEkw4BLooCXfMRegAYp0mX2zr0sQBDU8xjTA.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 1</h3>
+                    <p class="mb-2">Description of project 1.</p>
+                    <a class="text-[#d7a7a7] hover:underline hover:text-[#ffcccc] transition duration-300" href="#">View Project</a>
+                </div>
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Project 2 image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/C2JScbAjSA7VOd7ugu7bjXEKH89m5pXEctgyjBhQ7VGEf4xJA.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 2</h3>
+                    <p class="mb-2">Description of project 2.</p>
+                    <a class="text-[#d7a7a7] hover:underline hover:text-[#ffcccc] transition duration-300" href="#">View Project</a>
+                </div>
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Project 3 image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/fZRYPZFHruUaE6XdxGOocJGsPWtLwI3kKxW6Z13cKc4IexjTA.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 3</h3>
+                    <p class="mb-2">Description of project 3.</p>
+                    <a class="text-[#d7a7a7] hover:underline hover:text-[#ffcccc] transition duration-300" href="#">View Project</a>
+                </div>
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md hover-animate">
+                    <img alt="Project 4 image" class="mb-4 rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/JHB2VeZSBfn59kS64OkxXwrO01NUaPcmzq8fHR1Q6L4m4jHnA.jpg" width="300"/>
+                    <h3 class="text-lg mb-2">Project 4</h3>
+                    <p class="mb-2">Description of project 4.</p>
+                    <a class="text-[#d7a7a7] hover:underline hover:text-[#ffcccc] transition duration-300" href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <h2 class="text-xl mb-4">Skills</h2>
+            <div class="mb-4">
+                <p>HTML</p>
+                <div class="w-full bg-[#4b3b3b] rounded-full h-2.5 mb-4">
+                    <div class="progress-bar" style="--progress-width: 91%;"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p>CSS</p>
+                <div class="w-full bg-[#4b3b3b] rounded-full h-2.5 mb-4">
+                    <div class="progress-bar" style="--progress-width: 83%;"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p>JavaScript</p>
+                <div class="w-full bg-[#4b3b3b] rounded-full h-2.5 mb-4">
+                    <div class="progress-bar" style="--progress-width: 75%;"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p>Tailwind CSS</p>
+                <div class="w-full bg-[#4b3b3b] rounded-full h-2.5 mb-4">
+                    <div class="progress-bar" style="--progress-width: 67%;"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p>React</p>
+                <div class="w-full bg-[#4b3b3b] rounded-full h-2.5 mb-4">
+                    <div class="progress-bar" style="--progress-width: 58%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <h2 class="text-xl mb-4">Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md text-center hover-animate achievement-animate">
+                    <h3 class="text-lg mb-2">Completed Projects</h3>
+                    <p class="text-4xl font-bold counter" data-target="150">0</p>
+                </div>
+                <div class="bg-[#3b2b2b] p-4 rounded-lg shadow-md text-center hover-animate achievement-animate">
+                    <h3 class="text-lg mb-2">Satisfied Customers</h3>
+                    <p class="text-4xl font-bold counter" data-target="100">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mb-6">
+            <button class="bg-[#d7a7a7] text-[#2b1b1b] py-2 px-4 rounded-full hover:bg-[#ffcccc] transition duration-300 shadow-md">Contact Me</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const width = bar.style.getPropertyValue('--progress-width');
+                        bar.style.width = width;
+                        observer.unobserve(bar);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            progressBars.forEach(bar => {
+                observer.observe(bar);
+            });
+
+            const counters = document.querySelectorAll('.counter');
+            const counterObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const increment = target / 200;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + increment);
+                                setTimeout(updateCount, 10);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCount();
+                        counterObserver.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+        });
+    </script>
+</body>
+</html>
